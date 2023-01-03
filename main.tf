@@ -1,4 +1,8 @@
 terraform {
+  backend "s3" {
+    bucket = "atlantis-tfstate-test"
+    region = "us-west-1"
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -6,6 +10,7 @@ terraform {
     }
   }
 }
+
 
 resource "aws_s3_bucket" "b" {
   bucket = "my-tf-test-buckettttttttt"
