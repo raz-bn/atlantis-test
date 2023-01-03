@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     bucket = "atlantis-tfstate-test"
     key = "tfstate"
-    region = "us-west-1"
+    region = "eu-west-1"
   }
   required_providers {
     aws = {
